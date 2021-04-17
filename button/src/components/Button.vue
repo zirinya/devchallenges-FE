@@ -50,6 +50,7 @@ button {
 .outline {
   border: 1px solid #3d5afe;
   color: #3d5afe;
+    background:transparent;
 }
 .outline:hover {
   border: 1px solid #3d5afe;
