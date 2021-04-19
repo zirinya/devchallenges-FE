@@ -24,7 +24,9 @@
           startIcon="fab fa-vuejs"
         />
         <Button color="secondary" size="md" />
-        <Button color="primary" size="sm" startIcon="fab fa-vuejs" />
+        <Button color="primary" size="sm" endIcon="local_grocery_store" />
+        <Button endIcon="done" />
+        <Button startIcon="done" />
       </div>
     </div>
   </div>

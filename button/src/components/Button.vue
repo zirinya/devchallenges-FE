@@ -9,9 +9,13 @@
       :endIcon="endIcon"
     >
       <div class="d-flex">
-        <span><i :class="startIcon"></i></span>
+        <span class="material-icons">
+          {{ startIcon }}
+        </span>
         <div class="my">{{ variant }} {{ color }}</div>
-        <span><i :class="endIcon"></i></span>
+        <span class="material-icons">
+          {{ endIcon }}
+        </span>
       </div>
     </button>
   </div>
