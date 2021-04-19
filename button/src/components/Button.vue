@@ -5,10 +5,14 @@
       :disabled="disabled"
       :style="{ 'background-color': color }"
       :size="size"
+      :startIcon="startIcon"
+      :endIcon="endIcon"
     >
-      <span> </span>
-      <div class="my">{{ variant }} {{ color }}</div>
-      <span> </span>
+      <div class="d-flex">
+        <span><i :class="startIcon"></i></span>
+        <div class="my">{{ variant }} {{ color }}</div>
+        <span><i :class="endIcon"></i></span>
+      </div>
     </button>
   </div>
 </template>
@@ -22,18 +26,20 @@ export default {
     text: String,
     size: {
       type: String,
-      default: "sm"
-    }
+      default: "md",
+    },
+    startIcon: String,
+    endIcon: String,
   },
   computed: {
     btnClass() {
       return {
         "small-btn": this.size == "sm",
         "medium-btn": this.size == "md",
-        "large-btn": this.size == "lg"
+        "large-btn": this.size == "lg",
       };
-    }
-  }
+    },
+  },
 };
 </script>
 <style scoped lang ="css">
@@ -124,5 +130,8 @@ button {
 .secondary:hover {
   background: #1c313a;
   color: #fff;
+}
+.d-flex {
+  display: flex;
 }
 </style>

@@ -17,9 +17,14 @@
       </div>
       <div class="d-flex">
         <Button variant="defualt" />
-        <Button color="danger" size="lg" />
+        <Button
+          color="danger"
+          size="lg"
+          endIcon="fab fa-vuejs"
+          startIcon="fab fa-vuejs"
+        />
         <Button color="secondary" size="md" />
-        <Button color="primary" size="sm" />
+        <Button color="primary" size="sm" startIcon="fab fa-vuejs" />
       </div>
     </div>
   </div>
@@ -31,8 +36,8 @@ import Button from "../src/components/Button.vue";
 export default {
   name: "App",
   components: {
-    Button
-  }
+    Button,
+  },
 };
 </script>
 
