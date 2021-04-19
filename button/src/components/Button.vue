@@ -1,11 +1,14 @@
 <template>
   <div>
     <button
-      :class="[variant, color]"
+      :class="[variant, color, btnClass]"
       :disabled="disabled"
       :style="{ 'background-color': color }"
+      :size="size"
     >
-      <slot>{{ variant }} {{ color }} </slot>
+      <span> </span>
+      <div class="my">{{ variant }} {{ color }}</div>
+      <span> </span>
     </button>
   </div>
 </template>
@@ -17,7 +20,20 @@ export default {
     disabled: Boolean,
     color: String,
     text: String,
+    size: {
+      type: String,
+      default: "sm"
+    }
   },
+  computed: {
+    btnClass() {
+      return {
+        "small-btn": this.size == "sm",
+        "medium-btn": this.size == "md",
+        "large-btn": this.size == "lg"
+      };
+    }
+  }
 };
 </script>
 <style scoped lang ="css">
@@ -43,14 +59,33 @@ button {
 .primary:hover {
   background: #0039cb;
 }
+.small-btn {
+  height: 30px;
+  width: auto;
+}
+.medium-btn {
+  height: 50px;
+  width: auto;
+}
+.my {
+  margin: 0px 17px;
+}
+.large-btn {
+  height: 70px;
+  width: auto;
+}
+
 .defualt:hover,
 .defualt:focus {
   background: #aeaeae;
 }
+.py-2 {
+  padding: 0px 60px;
+}
 .outline {
   border: 1px solid #3d5afe;
   color: #3d5afe;
-    background:transparent;
+  background: transparent;
 }
 .outline:hover {
   border: 1px solid #3d5afe;
