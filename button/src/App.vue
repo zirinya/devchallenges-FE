@@ -1,44 +1,20 @@
 <template>
   <div id="app">
     <div class="btn-warpper">
-      <div class="d-flex">
-        <div>"Button" <Button variant="defualt" /></div>
-      </div>
-      <div class="d-flex">
-        <div>"outline" <Button variant="outline" /></div>
-      </div>
-
-      <div class="d-flex">
-        <div>"text" <Button variant="text" /></div>
-      </div>
-      <div class="d-flex">
-        <div>"disable" <Button variant="defualt" disabled /></div>
-        <div>"disable" <Button variant="text" disabled /></div>
-      </div>
-      <div class="d-flex">
-        <Button variant="defualt" />
-        <Button
-          color="danger"
-          size="lg"
-          endIcon="fab fa-vuejs"
-          startIcon="fab fa-vuejs"
-        />
-        <Button color="secondary" size="md" />
-        <Button color="primary" size="sm" endIcon="local_grocery_store" />
-        <Button endIcon="done" />
-        <Button startIcon="done" />
-      </div>
+      <Button startIcon="done" variant="outline" endIcon="done" />
+      <Input placeholder="hi placeholder" label="label" helperText="fddgdfg" />
     </div>
   </div>
 </template>
 
 <script>
 import Button from "../src/components/Button.vue";
-
+import Input from "../src/components/Input.vue";
 export default {
   name: "App",
   components: {
     Button,
+    Input,
   },
 };
 </script>
