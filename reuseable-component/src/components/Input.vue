@@ -1,14 +1,24 @@
 <template>
   <div class="input">
     <label :for="name">{{ label }}</label>
-    <input
-      type="text"
-      :placeholder="placeholder"
-      :label="label"
-      :disabled="disabled"
-      :name="name"
-      :helperText="helperText"
-    />
+    <div>
+      <span class="material-icons">
+        {{ startIcon }}
+      </span>
+      <input
+        type="text"
+        :placeholder="placeholder"
+        :label="label"
+        :disabled="disabled"
+        :name="name"
+        :helperText="helperText"
+        :startIcon="startIcon"
+        :endIcon="endIcon"
+      />
+      <span class="material-icons">
+        {{ endIcon }}
+      </span>
+    </div>
     <small> {{ helperText }}</small>
   </div>
 </template>
@@ -19,6 +29,8 @@ export default {
     disabled: Boolean,
     helperText: String,
     name: String,
+    startIcon: String,
+    endIcon: String,
     placeholder: {
       type: String,
     },
